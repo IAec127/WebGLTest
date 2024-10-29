@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         _gyroText.text = "Gyro rotation rate" + _gyro.rotationRate + "/Gyro attitude" + _gyro.attitude + "/Gyro enabled :" + _gyro.enabled;
 
         //開始時のジャイロの数値との差分を求める
-        var attitudeX = _gyro.attitude.x - _defaultAttitude.x + 0.3f;
+        var attitudeX = _gyro.attitude.x - _defaultAttitude.x;
         var attitudeY = _gyro.attitude.y - _defaultAttitude.y;
 
         //X軸回転（推進力、上下回転）
