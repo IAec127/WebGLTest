@@ -25,6 +25,26 @@
     </div>
     <script>
 
+      $(function(){
+
+      var j_screen =$("<div class='rotage_alert' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.9);vertical-align:middle;text-align:center;'><div style='color:white;font-size:32px;padding:200px'>このゲームは横向きで遊んで下さい</div></div>");
+
+      $(window).bind("load orientationchange",function(){
+
+      if(Math.abs(window.orientation) === 90){
+
+      $(".rotage_alert").remove();
+
+      }else{
+
+      $("body").append(j_screen)
+
+      }
+
+      })
+
+      });
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -57,11 +77,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGLtest.loader.js";
+      var loaderUrl = buildUrl + "/TestPlay.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WebGLtest.data.gz",
-        frameworkUrl: buildUrl + "/WebGLtest.framework.js.gz",
-        codeUrl: buildUrl + "/WebGLtest.wasm.gz",
+        dataUrl: buildUrl + "/TestPlay.data.gz",
+        frameworkUrl: buildUrl + "/TestPlay.framework.js.gz",
+        codeUrl: buildUrl + "/TestPlay.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "TEST",
