@@ -25,25 +25,25 @@
     </div>
     <script>
 
-      $(function(){
+      //$(function(){
 
-      var j_screen =$("<div class='rotage_alert' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.9);vertical-align:middle;text-align:center;'><div style='color:white;font-size:32px;padding:200px'>このゲームは横向きで遊んで下さい</div></div>");
+      //var j_screen =$("<div class='rotage_alert' style='position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.9);vertical-align:middle;text-align:center;'><div style='color:white;font-size:32px;padding:200px'>このゲームは横向きで遊んで下さい</div></div>");
 
-      $(window).bind("load orientationchange",function(){
+      //$(window).bind("load orientationchange",function(){
 
-      if(Math.abs(window.orientation) === 90){
+      //if(Math.abs(window.orientation) === 90){
 
-      $(".rotage_alert").remove();
+      //$(".rotage_alert").remove();
 
-      }else{
+      //}else{
 
-      $("body").append(j_screen)
+      //$("body").append(j_screen)
 
-      }
+      //}
 
-      })
+      //})
 
-      });
+      //});
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
