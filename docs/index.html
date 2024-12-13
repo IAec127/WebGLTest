@@ -28,7 +28,17 @@
     <script>
       /* 回転させるコード */
       var rotateElement = document.getElementById('rotate-container');
-      rotateElement.style.transform = `rotate(-90deg)`; 
+      // rotateElement.style.transform = `rotate(-90deg)`; 
+      rotateElement.animate(
+	[
+	  { transform: `rotate(0deg)`},
+	  { transform: `rotate(-90deg)`}
+	],
+	{
+	  fill: "forwards",
+	  duration: 50000, //再生時間(0ミリ)
+	},
+      );
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
