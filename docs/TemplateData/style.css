@@ -1,5 +1,4 @@
 body { padding: 0; margin: 0 }
-article {  transform:rotate(-90deg); transform-origin: 70% 70%;}
 #unity-container { position-top: 200px;}
 /*#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }*/
 #unity-canvas { background: #0000ff;}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <article>
+    <article id="rotate-container">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=480 height=270 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -26,6 +26,9 @@
     </div>
     </article>
     <script>
+      /* 回転させるコード */
+      var rotateElement = document.getElementById('rotate-container');
+      rotateElement.style.transform = `rotate(-90deg)`; 
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -127,6 +130,9 @@
             };
 
       document.body.appendChild(script);
+
+      var angle = -90;
+      
 
     </script>
   </body>
